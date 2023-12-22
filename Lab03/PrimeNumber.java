@@ -1,4 +1,3 @@
-package lab03;
 import java.util.Scanner;
 
 class PrimeNumber {
@@ -34,7 +33,7 @@ class PrimeNumber {
 
 class Tester {
 	
-	public static void main(String[] args)
+	public static void main(String args[])
 	{
 		Scanner inputScanner = new Scanner(System.in);
 		

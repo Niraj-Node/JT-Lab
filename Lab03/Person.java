@@ -1,4 +1,3 @@
-package lab03;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -76,7 +75,7 @@ class Student extends Person {
 	
 	public double getTotalMarks() {
 		double sum = 0;
-		for(int i=0;i<5;i++) {
+		for(int i=0;i<marks.length;i++) {
 			sum += marks[i];
 		}
 		return sum;
@@ -113,7 +112,8 @@ class TestStudent {
 		
 		System.out.print("Enter the number of the Students: ");
 		int n = inputScanner.nextInt();
-		
+		int noOfSubjects = 5;
+
 		Student[] obj = new Student[n];
 		for(int i=0;i<n;i++)
 		{
@@ -126,7 +126,7 @@ class TestStudent {
 			System.out.print("Age ~ ");
 			int age = inputScanner.nextInt();
 			
-			double[] marks = new double[5];
+			double[] marks = new double[noOfSubjects];
 			for(int j=0;j<marks.length;j++)
 			{
 				System.out.print("Marks of Subject " + (j+1) + " ~ ");
@@ -143,7 +143,8 @@ class TestStudent {
 		for(int i=0;i<n;i++)
 		{
 			double total = obj[i].getTotalMarks();
-			if(total > maxAvg)
+			double avg = total/noOfSubjects;
+			if(avg > maxAvg)
 			{
 				maxAvg = total;
 				maxIdx = i;
@@ -163,7 +164,7 @@ class TestStudent {
 		System.out.print("Age ~ ");
 		int age = inputScanner.nextInt();
 		
-		double[] marks = new double[5];
+		double[] marks = new double[noOfSubjects];
 		for(int j=0;j<marks.length;j++)
 		{
 			System.out.print("Marks of Subject " + (j+1) + " ~ ");
