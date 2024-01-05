@@ -12,7 +12,7 @@ public class DivideByZero {
         
         try {
             int div = a/b;
-            System.out.println("Divison : " + div);
+            System.out.println("Division : " + div);
         }
 
         catch(ArithmeticException e) {
